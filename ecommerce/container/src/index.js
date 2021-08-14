@@ -1,1 +1,1 @@
-console.log('container src index.js');
+import ('./boots');
