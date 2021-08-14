@@ -4,14 +4,14 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 module.exports = {
   mode: 'development',
   devServer: {
-    port: 8081,
+    port: 8082,
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'products', // more on this 'name' in a moment
+      name: 'cart', // more on this 'name' in a moment
       filename: 'remoteEntry.js', // sets the name of the manifest file. leave it as remoteEntry.js unless you have got a good reason to change it.
       exposes: {
-        './ProductIndex': './src/index' // aliases filenames
+        './CartShow': './src/index' // aliases filenames
       }
     }),
     new HtmlWebpackPlugin({
