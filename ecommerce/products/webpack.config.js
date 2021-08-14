@@ -5,5 +5,9 @@ module.exports = {
   devServer: {
     port: 8080,
   },
-  plugins: [new HtmlWebpackPlugin()],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './public/index.html'
+    })
+  ]
 };
