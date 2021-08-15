@@ -12,7 +12,8 @@ module.exports = {
       filename: 'remoteEntry.js', // sets the name of the manifest file. leave it as remoteEntry.js unless you have got a good reason to change it.
       exposes: {
         './CartShow': './src/index' // aliases filenames
-      }
+      },
+      shared: ['faker'],
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html' // starting point
