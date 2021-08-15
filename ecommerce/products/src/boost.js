@@ -1,6 +1,6 @@
 import faker from 'faker';
 
-const mount = (ele) => {
+const products = (ele) => {
   let products = "";
 
   for(let i=0; i<5; i++) {
@@ -23,7 +23,7 @@ if (process.env.NODE_ENV === 'development') {
   // with id 'products-list'
   if (ele) {
     // we are probably running in isolation
-    mount(ele);
+    products(ele);
   } 
 }
 
@@ -32,4 +32,4 @@ if (process.env.NODE_ENV === 'development') {
 // through the CONTAINER applicationCache
 // no guaranteee that an element with an id of 'products-list' exists or not
 // we do not want try to immediately render the app
-export { mount };
+export { products };
